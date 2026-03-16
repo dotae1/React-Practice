@@ -1,0 +1,36 @@
+import ReactDOM from "react-dom";
+
+const num = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+];
+
+/**
+ * 개인 실습 파일
+ * 2 ~ 20단 까지 짝수인 것만 출력
+ * 1 ~ 9 까지는 9까지만 10 이상은 자기 자신까지만 출력
+ */
+const element = (
+  <div style={{ display: "flex" }}>
+    {num.map(
+      (n) =>
+        n % 2 === 0 && (
+          <div
+            style={{
+              padding: 10,
+              color: n % 2 == 0 && n >= 10 ? "blue" : "black",
+            }}
+          >
+            {num.map((m) =>
+              (n < 10 && m <= 9) || (n >= 10 && m <= n) ? (
+                <div>
+                  {n} x {m} = {n * m}
+                </div>
+              ) : null
+            )}
+          </div>
+        )
+    )}
+  </div>
+);
+
+ReactDOM.render(element, document.getElementById("root"));
