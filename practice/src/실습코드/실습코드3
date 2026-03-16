@@ -1,0 +1,51 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+//import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+const arr = ['1번', '2번', '3번', '3번'];
+
+const arr2 = [];
+for (let i = 0; i < arr.length; i++) {
+  arr2.push(<h4 key={i}>{arr[i]}</h4>);
+  // = [<h4>1번</h4>, <h4>2번</h4>, <h4>3번</h4>]
+}
+
+const element = (
+  <div>
+    <h1>배열로 넣기</h1>
+    <ul>
+      <li>{arr}</li>
+      <li>{arr2}</li>
+    </ul>
+
+    <hr />
+
+    <h1>Array.map</h1>
+    <ul>
+      <li>
+        {arr.map((item, index) => {
+          return <h4 key = {`${item} - ${index}`}>{item}</h4>;
+          /**
+           * arr에 1, 2, 3, 3으로 넣게되면 key값으로 item을 넣었을 시 중복 발생 가능
+           * 따라서 배열 index를 통해 구분 가능한 방법 존재 (index를 키로 주면 나중에 문제가 생길 수 있음. 순서가 변경이 되면 인덱스가 바뀜.)
+           * 이 때 키 값이 새로 할당이 되는데 React에서 순서가 바뀐게아니라 순서가 바뀐게 아닌 아예 새로운 요소로 바뀌었다고 판단함.
+           * 순서가 변경되지 않는 경우가 보장되면 사용할 수도 있다.
+           * ''와 ``(백틱)의 차이 : ``를 사용하면 `결과는 ${a+b}`와 같이 문자열의 편한 연산이 가능하다.
+           */
+        })}
+      </li>
+    </ul>
+  </div>
+);
+
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement);
+
+root.render(element);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

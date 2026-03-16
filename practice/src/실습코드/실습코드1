@@ -1,0 +1,55 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client'; // 1. client 경로 추가
+
+let text = 'Hello, world!';
+const num = 15;
+const obj = { key: 0, a: 1, b: 2 };
+const arr = ['a', 'b', 'c'];
+const imageUrl = 'https://dst6jalxvbuf5.cloudfront.net/static/img/logo/logo.svg';
+
+const element = (
+  <div>
+    <h2>변수 넣기</h2>
+    <ul>
+      <li>{text}</li>
+      <li>{text + ' test'}</li> //연산 가능
+    </ul>
+
+    <h2>숫자 및 계산식 넣기</h2>
+    <ul>
+      <li>{num}</li>
+      <li>{num + 15}</li>
+    </ul>
+
+    <h2>Boolean, Nullish 값 넣기 (화면 안나옴)</h2> //Boolean와 Nullish는 형태를 가지고 있지 않아 출력 시 아무 내용도 뜨지 않는다.
+    <ul>
+      <li>{true}</li>
+      <li>{false}</li>
+      <li>{undefined}</li>
+      <li>{null}</li>
+    </ul>
+
+    <h2>Object, Array 넣기</h2>
+    <ul>
+      {/* <li>{obj}</li> */} {/* 주석 해제 시 에러 발생 (객체는 직접 출력 불가) */} //object는 jsx에서 사용할 수 없다.
+      <li>{arr}</li> //abc로 출력(문자열을 연결해서 나열해줌)
+    </ul>
+
+    <h2>주석 넣기</h2>
+    <ul>
+      <li>{/* 주석입니다. 화면에 안보여요. */}</li>
+    </ul>
+
+    <h2>태그 속성에 넣기</h2>
+    <ul>
+      <li>
+        <img src={imageUrl} alt="logo" width="100" /> //속성으로 Javascript를 사용가능 ""사용하면 변수가 아니라 단순 문자열로 사용한다.
+      </li>
+    </ul>
+  </div>
+);
+
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement);
+
+root.render(element);
