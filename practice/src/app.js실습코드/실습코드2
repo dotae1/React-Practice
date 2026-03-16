@@ -1,0 +1,14 @@
+import './App.css';
+import Hello from './component/Hello.js';
+import World from './component/World.js';
+import Heading from './component/Heading.js';
+
+// Heading 이라는 컴포넌트를 만들고 Hello, World 컴포넌트를 통합하기
+export default function App() {
+  return (
+    <div>
+      <Heading type = "h1">Hello</Heading>
+      <Heading type = "h2">World</Heading>
+    </div>
+  );
+}
