@@ -19,19 +19,19 @@ const roundBoxStyle = {
 
 const element = (
   <div
-    style={
-      // style="position:relative; width:400px;"
-      {
+    style ={
+    { 
       // 1. Object로 css 작성
       position: 'relative',
       width: 400,
       height: 1000,
       background: '#f1f1f1'
     }
-  }
+}
   >
     <div style={roundBoxStyle}>Hello1</div>
 
+    // ...(전개 연산자) (Spread문법) : 객체 안의 값을 펼쳐서 넣는다. (재사용 목적)
     <div style={{ ...roundBoxStyle, top: 350 }}>
       {/* 4. className을 통한 스타일링 (CSS-in-JS) */}
       <div className="highlight">Hello2</div>
@@ -59,4 +59,5 @@ root.render(element);
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// 웹 성능 측정 코드
 reportWebVitals();
