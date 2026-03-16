@@ -1,0 +1,13 @@
+import './App.css';
+import Hello from './app.js실습코드/Hello.js';
+import World from './app.js실습코드/World.js';
+
+export default function App() {
+  return (
+    <div>
+      <Hello></Hello>
+      {/* <World></World> */}
+      <World />
+    </div>
+  );
+}
