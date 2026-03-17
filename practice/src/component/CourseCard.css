@@ -1,0 +1,57 @@
+ul,
+li {
+    list-style-type: none;
+    margin: 0;
+} /*List에 붙는 까만 점을 삭제 해준다. margin:0 -> 기본 여백 삭제*/
+
+.CourseCard {
+    max-width: 300px; /*카드 너비를 300로 제한*/
+}
+
+.cover {
+    width: 100%; /*이미지 컨테이너가 카드 너비에 꽉 차도록 설정*/
+}
+
+.cover img {
+    width: 100%;
+    border-radius: 4px; /*이미지 모서리를 둥글게 깎는다.*/
+}
+
+.tags {
+    display: flex; /*태그들을 가로로 나란히 배치*/
+    font-size: 0.8rem; /*글자 크기*/
+    font-weight: 600; /*글자 굵기*/
+    line-height: 1.47; /*줄 간격*/
+    padding: 3px 0 5px 0; /*위, 오른쪽, 아래, 왼쪽 여백 설정*/
+}
+
+.tags .tag:not(:last-child):after {
+    content: '·';
+}
+
+.name {
+    margin: 0;
+    padding: 6px 0;
+}
+
+.price {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0.8rem 0 0.5rem;
+}
+
+.types {
+    padding: 0;
+}
+
+/*동영상 강의 같은 뱃지 모양을 꾸며주는 코드*/
+.types .type {
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding: 6px;
+    background-color: #f7f8fa;
+    border-radius: 4px;
+    color: #5a25fa;
+    margin-right: 5px;
+    display: inline-block;
+}
