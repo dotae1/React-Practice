@@ -1,0 +1,69 @@
+ui,
+li {
+    list-style-type: none;
+    margin : 10;
+}
+
+.Practice {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cover{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 2px 0;
+}
+
+.name {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 2줄 제한 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 4px 0;
+}
+
+.cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tags {
+    display: flex; /*태그들을 가로로 나란히 배치*/
+    font-size: 0.8rem; /*글자 크기*/
+    font-weight: 600; /*글자 굵기*/
+    line-height: 2.47; /*줄 간격*/
+    gap: 7px;
+    padding: 3px 0 5px 0; /*위, 오른쪽, 아래, 왼쪽 여백 설정*/
+}
+
+.firstDate {
+    font-size: 1.0rem;
+    font-weight: 60;
+    margin: 0rem
+}
+
+.types {
+    padding: 0;
+}
+
+/*동영상 강의 같은 뱃지 모양을 꾸며주는 코드*/
+.types .type {
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding: 6px;
+    background-color: #f7f8fa;
+    border-radius: 4px;
+    color: #5a25fa;
+    margin-right: 5px;
+    display: inline-block;
+}
