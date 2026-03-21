@@ -1,0 +1,29 @@
+/* import CheckBox from './component/CheckBox';
+import Select from './component/Select';
+import TextArea from './component/TextArea';
+import TextInput from './component/TextInput';
+import UncontrolledTextInput from './component/UncontrolledTextInput'; */
+
+function App() {
+  return (
+    <div className="App">
+      <div>
+        <TextInput />
+      </div>
+      <div>
+        <TextArea />
+      </div>
+      <div>
+        <Select />
+      </div>
+      <div>
+        <CheckBox />
+      </div>
+      <div>
+        <UncontrolledTextInput />
+      </div>
+    </div>
+  );
+}
+
+export default App;
